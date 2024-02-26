@@ -2,6 +2,7 @@
 
 <%= simple_form_for [@list, @bookmark] do |form| %>
   <%= form.association :movie, collection: Movie.all %>
+  <%= form.input :comment %>
   <%= form.button :submit, "Create Bookmark" %>
 <% end %>
 
