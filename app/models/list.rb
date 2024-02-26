@@ -3,5 +3,6 @@ class List < ApplicationRecord
   #Valida con la base de datos si el name ya existe antes de insertarlo.
   #Has_many para colocar uno a muchos entre el modelo de bookmark.
   validates :name, presence: true, uniqueness: true
-  has_many :bookmarks
+  has_many :bookmarks, dependent: :destroy
+  has_many :movies, through: :bookmarks
 end
