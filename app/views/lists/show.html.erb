@@ -1,0 +1,7 @@
+<h1>List Details</h1>
+
+<h2>Nombre de la lista: <%= @list.name %></h2>
+
+<%= link_to "Back", lists_path %>
+
+<%= link_to "New List Bookmark", new_list_bookmark_path(list_id: @list.id) %>
