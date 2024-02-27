@@ -2,6 +2,11 @@
 
 <ul>
   <% @lists.each do |list| %>
+  <%= cl_image_tag("bmrkhqlhjhsu5nh478cs",
+      width: 400, height: 300, crop: :fill) %>
+  <%= cl_image_tag("jhs985cekp6ekxuzvdir",
+      width: 400, height: 300, crop: :fill) %>
+
     <li>
       <%= link_to list.name, list_path(list) %>
     </li>
