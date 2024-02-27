@@ -1,2 +1,38 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+
+h1 {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Estilos para la lista */
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Utiliza flexbox para organizar los elementos */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+  justify-content: space-around; /* Distribuye los elementos equitativamente con espacio alrededor */
+}
+
+li {
+  width: 200px; /* Ancho deseado para cada elemento de la lista */
+  margin-bottom: 10px; /* Espacio entre cada elemento */
+}
+
+/* Estilos para los enlaces */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
