@@ -5,3 +5,18 @@
 <%= link_to "Back", lists_path %>
 
 <%= link_to "New List Bookmark", new_list_bookmark_path(list_id: @list.id) %>
+
+
+<div class="row">
+  <% @bookmarks.each do |bookmark| %>
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Película: <%= bookmark.movie.title %></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Comentario:</h6>
+          <p class="card-text"><%= bookmark.comment %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

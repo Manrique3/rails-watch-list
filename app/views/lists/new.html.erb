@@ -1,11 +1,11 @@
-<div class="content">
+<div class="content new-list-content">
   <h1>New List</h1>
 </div>
-  <%= simple_form_for @list do |form| %>
-    <div class="form-container">
-      <%= form.input :name, input_html: { style: 'width: 200px;' } %>
-      <%= form.button :submit, "Create List", class: "btn btn-primary" %>
-    </div>
-  <% end %>
-
-  <%= link_to "Back", lists_path %>
+<%= simple_form_for @list, html: { class: 'new-list-form' } do |form| %>
+  <div class="form-container">
+    <%= form.input :name, input_html: { class: 'list-name-input', style: 'width: 200px;' } %>
+    <%= form.input :image, as: :file, label: 'List Image', input_html: { class: 'list-image-input' } %>
+    <%= form.button :submit, "Create List", class: "btn btn-primary create-list-btn" %>
+  </div>
+<% end %>
+<%= link_to "Back", lists_path, class: 'back-link' %>

@@ -1,16 +1,16 @@
-<h1>List of Lists</h1>
-
-<ul>
-  <% @lists.each do |list| %>
-  <%= cl_image_tag("bmrkhqlhjhsu5nh478cs",
-      width: 400, height: 300, crop: :fill) %>
-  <%= cl_image_tag("jhs985cekp6ekxuzvdir",
-      width: 400, height: 300, crop: :fill) %>
-
-    <li>
-      <%= link_to list.name, list_path(list) %>
-    </li>
-  <% end %>
-</ul>
-
-<%= link_to "New List", new_list_path %>
+<div class="lists-content">
+  <h1>List of Lists</h1>
+  <ul class="lists">
+    <% @lists.each do |list| %>
+      <li>
+        <%= link_to list_path(list) do %>
+          <div class="list-item">
+            <%= image_tag list.image, class: "list-image" if list.image.attached? %>
+            <h3><%= list.name %></h3>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "New List", new_list_path %>
+</div>
